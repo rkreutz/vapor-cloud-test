@@ -22,4 +22,8 @@ try config.setup()
 let drop = try Droplet(config)
 try drop.setup()
 
+drop.get() { req in
+    return "Hey yo!"
+}
+
 try drop.run()
